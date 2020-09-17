@@ -4,7 +4,7 @@
 /**
  * main - Creates and tells sign of a random number
  *
- * Return: 0 Always (Succes)
+ * Return: 0 Always, on completion.
  */
 int main(void)
 {
@@ -25,5 +25,6 @@ if (n < 0)
 {
 printf("%d is is negative\n", n);
 }
+
 return (0);
 }
