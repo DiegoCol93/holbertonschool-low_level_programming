@@ -9,15 +9,15 @@ int main(void)
 {
 int num = 48;
 int num2;
-while(num<=57)
+while (num <= 57)
 {
-for(num2 = 48; num2 <= 57; num2++)
+for (num2 = 48; num2 <= 57; num2++)
 {
 if (num < num2)
 {
 putchar(num);
 putchar(num2);
-if(num != 56 || num2 != 57)
+if (num != 56 || num2 != 57)
 {
 putchar(44);
 putchar(32);
