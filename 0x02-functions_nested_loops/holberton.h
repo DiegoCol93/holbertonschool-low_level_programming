@@ -33,3 +33,8 @@ int print_sign(int n);
  * _abs - Computes the absolute value of a number
  */
 int _abs(int);
+
+/**
+ * print_last_digit - Prints the last digit of a number
+ */
+int print_last_digit(int);
