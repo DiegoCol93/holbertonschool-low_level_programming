@@ -23,3 +23,8 @@ int _islower(int c);
  * _isalpha - Chekcs if c is an alphabetic character or not
  */
 int _isalpha(int c);
+
+/**
+ * print_sign
+ */
+int print_sign(int n);
