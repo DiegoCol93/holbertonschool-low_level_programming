@@ -25,6 +25,11 @@ int _islower(int c);
 int _isalpha(int c);
 
 /**
- * print_sign
+ * print_sign - Prints sign of number n
  */
 int print_sign(int n);
+
+/**
+ * _abs - Computes the absolute value of a number
+ */
+int _abs(int);
