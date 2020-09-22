@@ -7,7 +7,7 @@ void jack_bauer(void)
 {
 	int num0, num1, num2, num3;
 
-	for (num0 = 48; num0 <= 50 && num1 <= 51; num0++)
+	for (num0 = 48; num0 <= 50; num0++)
 	{
 		for (num1 = 48; num1 <= 57; num1++)
 		{
@@ -21,6 +21,14 @@ void jack_bauer(void)
 					_putchar(num2);
 					_putchar(num3);
 					_putchar('\n');
+					if (num3 == 57 && num2 == 53 && num1 == 51 && num0 == 50)
+					{
+						num0 = 58;
+						num1 = 58;
+						num2 = 58;
+						num3 = 58;
+						break;
+					}
 				}
 			}
 		}
