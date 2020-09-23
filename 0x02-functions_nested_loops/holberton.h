@@ -53,3 +53,8 @@ void times_table(void);
  * add - Adds two integers.
  */
 int add(int, int);
+
+/**
+ * print_to_98 - prints from input number to 98
+ */
+void print_to_98(int n);
