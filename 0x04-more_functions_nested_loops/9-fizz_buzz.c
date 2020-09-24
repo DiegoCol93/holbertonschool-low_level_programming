@@ -4,7 +4,7 @@
  * main - Prints Fizz for factors of 3, prints Buzz for factors of 5
  *             and prints FizzBuzz for factors of 3 and 5, up to 100.
  */
-void main(void)
+int main(void)
 {
 	int i;
 
@@ -28,4 +28,5 @@ void main(void)
 		printf("%d ", i);
 	}
 	putchar(10);
+	return (0);
 }
