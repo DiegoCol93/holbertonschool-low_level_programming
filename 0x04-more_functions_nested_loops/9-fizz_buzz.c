@@ -3,6 +3,8 @@
 /**
  * main - Prints Fizz for factors of 3, prints Buzz for factors of 5
  *             and prints FizzBuzz for factors of 3 and 5, up to 100.
+ *
+ * Return: 0 Always, on completion.
  */
 int main(void)
 {
@@ -25,7 +27,7 @@ int main(void)
 		if (i % 5 == 0)
 		{
 			printf("Buzz");
-			if(i == 100)
+			if (i == 100)
 			{
 				putchar(10);
 				return (0);
