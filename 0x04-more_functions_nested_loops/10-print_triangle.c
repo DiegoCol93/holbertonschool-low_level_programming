@@ -12,7 +12,7 @@ void print_triangle(int size)
 		edge = (size - 1);
 		for (i = 0; i < size; i++)
 		{
-			for (space = 0 ; space <= edge; space++)
+			for (space = 0 ; space < edge; space++)
 			{
 				_putchar(32);
 			}
@@ -23,5 +23,9 @@ void print_triangle(int size)
 			edge--;
 			_putchar(10);
 		}
+	}
+	else
+	{
+		_putchar(10);
 	}
 }
