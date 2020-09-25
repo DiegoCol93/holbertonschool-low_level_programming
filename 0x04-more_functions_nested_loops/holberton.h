@@ -30,3 +30,6 @@ void print_square(int size);
 
 /* print_triangle - Prints Triangle size n using "#". */
 void print_triangle(int size);
+
+/* print_number - Prints numbers in -0000 format. */
+void print_number(int n);
