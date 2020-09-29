@@ -5,13 +5,14 @@
  */
 void rev_string(char *s)
 {
-	char BckwCopy[100];
 	int Lenght, End;
 	int Write = 0;
 
 	for (Lenght = 0; s[Lenght] != '\0'; Lenght++)
 	{
 	}
+	char BckwCopy[Lenght];
+
 	End = Lenght - 1;
 	while (End >= 0)
 	{
