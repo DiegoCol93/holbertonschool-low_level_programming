@@ -2,6 +2,8 @@
 /**
  * puts2 - Prints a string oddly.
  * @str: Input string.
+ *
+ * Return: None.
  */
 void puts2(char *str)
 {
