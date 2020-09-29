@@ -5,7 +5,7 @@
  */
 void rev_string(char *s)
 {
-	char BckwCopy[10];
+	char BckwCopy[100];
 	int Lenght, End;
 	int Write = 0;
 
