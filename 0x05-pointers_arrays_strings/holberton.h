@@ -21,3 +21,6 @@ void rev_string(char *s);
 
 /* puts2 - Prints an string oddly. */
 void puts2(char *str);
+
+/* puts_half - Prints half of a string */
+void puts_half(char *str);
