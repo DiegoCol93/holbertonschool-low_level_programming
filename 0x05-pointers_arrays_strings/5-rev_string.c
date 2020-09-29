@@ -1,27 +1,25 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * rev_string - Reverts a string.
  * @s: Input string.
  */
 void rev_string(char *s)
 {
-	int Lenght, End;
-	int Write = 0;
+	int Lenght, Swap;
+	char Char, *Eye;
 
-	for (Lenght = 0; s[Lenght] != '\0'; Lenght++)
+	Eye = s;
+	for (Lenght = 0; *Eye != '\0'; Lenght++)
 	{
+		Eye++;
 	}
-	char BckwCopy[Lenght];
-
-	End = Lenght - 1;
-	while (End >= 0)
+	Eye = Eye - 1;
+	for (Swap = 0; Swap < (Lenght / 2); Swap++)
 	{
-		BckwCopy[Write] = s[End];
-		End--;
-		Write++;
-	}
-	for (Lenght = 0; s[Lenght] != '\0'; Lenght++)
-	{
-		s[Lenght] = BckwCopy[Lenght];
+		Char = s[Swap];
+		s[Swap] = *Eye;
+		*Eye = Char;
+		Eye--;
 	}
 }
