@@ -15,7 +15,7 @@ void print_rev(char *s)
 		Start++;
 	}
 	End = s + Lenght - 1;
-	while (End > s)
+	while (End >= s)
 	{
 		_putchar(*End);
 		End--;
