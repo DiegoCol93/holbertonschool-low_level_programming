@@ -18,3 +18,6 @@ void print_rev(char *s);
 
 /* rev_string - Reverts a string. */
 void rev_string(char *s);
+
+/* puts2 - Prints an string oddly. */
+void puts2(char *str);
