@@ -2,15 +2,13 @@
 /**
  * puts2 - Prints a string oddly.
  * @str: Input string.
- *
- * Return: None.
  */
 void puts2(char *str)
 {
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		str += 2;
-	}
+	int Lenght;
+
+	for (Lenght = 0; str[Lenght] != '\0'; Lenght++)
+	if ((Lenght % 2) == 0)
+	_putchar(str[Lenght]);
 	_putchar(10);
 }
