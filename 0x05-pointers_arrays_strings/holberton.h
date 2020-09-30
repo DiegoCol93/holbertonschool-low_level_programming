@@ -22,8 +22,11 @@ void rev_string(char *s);
 /* puts2 - Prints an string oddly. */
 void puts2(char *str);
 
-/* puts_half - Prints half of a string */
+/* puts_half - Prints half of a string. */
 void puts_half(char *str);
 
 /* print_array - prints n elements of an array of integers. */
 void print_array(int *a, int n);
+
+/* *_strcpy - Copies a string. */
+char *_strcpy(char *dest, char *src);
