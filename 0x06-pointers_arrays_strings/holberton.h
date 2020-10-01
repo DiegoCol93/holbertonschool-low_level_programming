@@ -15,3 +15,6 @@ int _strcmp(char *s1, char *s2);
 
 /* reverse_array - Reverses the content of an array of integers. */
 void reverse_array(int *a, int n);
+
+/* string_toupper - Changes character to Uppercase. */
+char *string_toupper(char *);
