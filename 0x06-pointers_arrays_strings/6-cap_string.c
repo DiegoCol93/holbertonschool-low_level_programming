@@ -1,10 +1,9 @@
 #include "holberton.h"
 /**
+ * cap_string - Capitalizes all the words on a string.
+ * @s: Target string.
  *
- *
- *
- *
- *
+ * Return: Capitalize string.
  */
 char *cap_string(char *s)
 {
