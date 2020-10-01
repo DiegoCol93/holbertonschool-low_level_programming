@@ -18,3 +18,6 @@ void reverse_array(int *a, int n);
 
 /* string_toupper - Changes character to Uppercase. */
 char *string_toupper(char *);
+
+/* cap_string - Capitalizes every word */
+char *cap_string(char *);
