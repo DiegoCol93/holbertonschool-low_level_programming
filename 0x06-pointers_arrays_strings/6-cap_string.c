@@ -20,7 +20,7 @@ char *cap_string(char *s)
 				if (s[Write - 1] == NewWord[Compare])
 				{
 				s[Write] = s[Write] - 32;
-				continue;
+				break;
 				}
 			}
 		}
