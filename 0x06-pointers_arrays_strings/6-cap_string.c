@@ -10,7 +10,11 @@ char *cap_string(char *s)
 	char NewWord[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 	int Write, Compare;
 
-	for (Write = 0; s[Write] != '\0'; Write++)
+	if (s[0] >= 97 && s[0] <= 122)
+	{
+		s[0] = s[0] - 32;
+	}
+	for (Write = 1; s[Write] != '\0'; Write++)
 	{
 		if (s[Write] >= 97 && s[Write] <= 122)
 		{
@@ -19,8 +23,7 @@ char *cap_string(char *s)
 			{
 				if (s[Write - 1] == NewWord[Compare])
 				{
-				s[Write] = s[Write] - 32;
-				break;
+					s[Write] = s[Write] - 32;
 				}
 			}
 		}
