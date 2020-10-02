@@ -27,3 +27,6 @@ char *leet(char *);
 
 /* rot13 - Encodes string into rot13 */
 char *rot13(char *);
+
+/* print_number - Prints integer with _putchar */
+void print_number(int n);
