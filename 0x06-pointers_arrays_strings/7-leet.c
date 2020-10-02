@@ -8,7 +8,7 @@
 char *leet(char *s)
 {
 	int Read, Write;
-	char Code[] = {"430714307"};
+	char Code[] = {"4307143071"};
 	char Letter[] = {"aeotlAEOTL"};
 
 	for (Read = 0; s[Read] != '\0'; Read++)
