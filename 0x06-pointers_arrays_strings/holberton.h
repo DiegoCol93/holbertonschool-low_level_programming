@@ -21,3 +21,6 @@ char *string_toupper(char *);
 
 /* cap_string - Capitalizes every word */
 char *cap_string(char *);
+
+/* leet - encodes string into 1337 */
+char *leet(char *);
