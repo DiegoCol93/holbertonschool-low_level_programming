@@ -15,7 +15,7 @@ char *cap_string(char *s)
 		if (s[Write] >= 97 && s[Write] <= 122)
 		{
 			Compare = 0;
-			for (Compare = 0; Compare < 13; Compare++)
+			for (Compare = 0; Compare < 12; Compare++)
 			{
 				if (s[Write - 1] == NewWord[Compare])
 				{
