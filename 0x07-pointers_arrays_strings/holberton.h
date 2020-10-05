@@ -1,5 +1,5 @@
-/* NULL definition */
-#define NULL 0
+#include <stddef.h>
+
 /* _putchar - Prints one character. */
 int _putchar(char c);
 
