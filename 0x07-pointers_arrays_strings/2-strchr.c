@@ -8,7 +8,7 @@
  */
 char *_strchr(char *s, char c)
 {
-	char *ptr = '\0'; /* <<- - - - - - - - - - - -Declaring NULL pointer. */
+	char *ptr = NULL; /* <<- - - - - - - - - - - -Declaring NULL pointer. */
 	int i = 0; /* <<- - - - - - - - - - - - - - - - -Declaring counter i. */
 
 	while (s[i] != 0) /* <<- - - - - - - Runs through lenght of string s. */
@@ -20,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++; /* <<- - - - - - - - - - - - - -Move index to next step. */
 	}
-	return (ptr); /* <<- - - - - - - - - - - - - -Return pointer to NULL. */
+	return (NULL); /* <<- - - - - - - - Return NULL if nothing was found. */
 }
