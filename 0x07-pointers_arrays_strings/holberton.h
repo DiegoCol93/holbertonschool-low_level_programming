@@ -1,4 +1,7 @@
 /* NULL definition. */
+#define NULL 0
+
+/* NUL definition. */
 #define NUL '\0'
 
 /* _putchar - Prints one character. */
