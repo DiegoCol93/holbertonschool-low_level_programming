@@ -11,7 +11,7 @@ char *_strchr(char *s, char c)
 	char *ptr; /* <<- - - - - - - - - - - - - - - -Declaring pointer ptr. */
 	int i = 0; /* <<- - - - - - - - - - - - - - - - -Declaring counter i. */
 
-	while (s[i] != 0) /* <<- - - - - - - Runs through lenght of string s. */
+	while (s[i] != '\0') /* <<- - - - - -Runs through lenght of string s. */
 	{
 		if (s[i] == c) /* Comparing if character on index equal to c. */
 		{
@@ -20,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++; /* <<- - - - - - - - - - - - - -Move index to next step. */
 	}
-	return ('\0'); /* <<- - - - - - - - Return NULL if nothing was found. */
+	return ('\0');/* <<- - - - - - - - -Return NULL if nothing was found. */
 }
