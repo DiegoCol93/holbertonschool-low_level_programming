@@ -1,5 +1,5 @@
 /* NULL definition. */
-#define NULL ( (void *) 0)
+#define NUL '\0'
 
 /* _putchar - Prints one character. */
 int _putchar(char c);
