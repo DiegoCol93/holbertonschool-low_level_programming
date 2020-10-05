@@ -20,5 +20,5 @@ char *_strchr(char *s, char c)
 		}
 		i++; /* <<- - - - - - - - - - - - - -Move index to next step. */
 	}
-	return (NUL); /* <<- - - - - - - - - - -Return pointer to found char. */
+	return ('\0'); /* <<- - - - - - - - - - Return pointer to found char. */
 }
