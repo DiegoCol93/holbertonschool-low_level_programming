@@ -18,7 +18,11 @@ char *_strchr(char *s, char c)
 			ptr = &s[i]; /* Sets ptr to address of 1st char found */
 			return (ptr); /* <<- - -Return pointer to found char. */
 		}
+		else if (s[i] == '\0')
+		{
+			return ('\0'); /* <<- - - Return if comparison ended. */		
+		}
 		i++; /* <<- - - - - - - - - - - - - -Move index to next step. */
 	}
-	return ('\0'); /* <<- - Return pointer to found char. */
+	return ('\0'); /* <<- - - - - - - -Return NULL if nothing was found . */
 }
