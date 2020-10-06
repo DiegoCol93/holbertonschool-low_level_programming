@@ -19,7 +19,7 @@ unsigned int _strspn(char *s, char *accept)
 	while (s[len_S] != 0) /* <<- - - -Runs through string up to a space. */
 	{
 		comp = 0; /* <<- - - - - - - - - - Resets comparison counter. */
-		while (comp < len_Ac) /* <<- - - - - - - - - Comparison loop. */
+		while (comp <= len_Ac) /* <<- - - - - - - - - Comparison loop. */
 		{
 			if (s[len_S] == accept[comp]) /* Comparing statement. */
 			{
