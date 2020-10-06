@@ -16,7 +16,7 @@ unsigned int _strspn(char *s, char *accept)
 	for (; accept[len_Ac] != 0; len_Ac++)
 	{/* ^^ - - - - - - - - - - - - - - - - - - -Calculates prefix lenght. */
 	}
-	while (s[len_S] != 32) /* <<- - - -Runs through string up to a space. */
+	while (s[len_S] != 0) /* <<- - - -Runs through string up to a space. */
 	{
 		comp = 0; /* <<- - - - - - - - - - Resets comparison counter. */
 		while (comp < len_Ac) /* <<- - - - - - - - - Comparison loop. */
