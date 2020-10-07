@@ -3,6 +3,8 @@
  * _pow_recursion - Returns the value of x raised to the power of y.
  * @x: base number.
  * @y: power number.
+ *
+ * Return: Result. -1 if y negative.
  */
 int _pow_recursion(int x, int y)
 {
@@ -14,5 +16,5 @@ int _pow_recursion(int x, int y)
 	{
 		return (-1);
 	}
-	return (x * _pow_recursion(x,(y - 1)));
+	return (x * _pow_recursion(x, (y - 1)));
 }
