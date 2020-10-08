@@ -18,7 +18,7 @@ int _pali(int len, char *s1, int i)
 	{
 	return (0);
 	}
-	return (3);
+	return (1);
 }
 /**
  * _lenght - Calculates lenght of a string, recursively.
