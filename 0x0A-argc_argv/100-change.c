@@ -9,11 +9,16 @@
  */
 int main(int argc, char *argv[])
 {
-	long int i = 0, num = 0;
+	unsigned long int i = 0, num = 0;
 	int centsA[5] = {25, 10, 5, 2, 1};
 	unsigned long int cents = 0;
 	unsigned long int times[5] = {0};
 
+	if (argv[1][0] == '-')
+	{
+		printf("0\n");
+		return (0);
+	}
 	if (argc == 1)
 	{
 		printf("Usage: %s cents\n", argv[0]);
@@ -24,11 +29,6 @@ int main(int argc, char *argv[])
 	{
 		printf("Error\n");
 		return (1);
-	}
-	if (num < 0)
-	{
-		printf("%lu\n", cents);
-		return (0);
 	}
 	for (i = 0; i < 5; i++)
 	{
