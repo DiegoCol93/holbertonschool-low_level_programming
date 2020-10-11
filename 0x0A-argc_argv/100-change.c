@@ -14,14 +14,14 @@ int main(int argc, char *argv[])
 	unsigned long int cents = 0;
 	unsigned long int times[5] = {0};
 
+	if (argc == 1)
+	{
+		printf("Error\n");
+		return (1);
+	}
 	if (argv[1][0] == '-')
 	{
 		printf("0\n");
-		return (0);
-	}
-	if (argc == 1)
-	{
-		printf("Usage: %s cents\n", argv[0]);
 		return (0);
 	}
 	num = atoi(argv[1]);
