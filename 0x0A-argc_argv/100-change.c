@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
 	num = atoi(argv[1]);
 	if (argc > 2)
 	{
-		printf("Error\n");
+		printf("\033[91mError\n\033[0m");
 		return (1);
 	}
-	if (num < 0)
+	if (num <= 0)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 	for (i = 0; i < 5; i++)
 	{
