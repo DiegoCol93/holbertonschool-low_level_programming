@@ -17,13 +17,13 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("\033[91mError\n\033[0m");
+		printf("Error\n");
 		return (0);
 	}
 	num = atoi(argv[1]);
 	if (argc > 2)
 	{
-		printf("\033[91mError\n\033[0m");
+		printf("Error\n");
 		return (1);
 	}
 	if (num < 0)
