@@ -9,10 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int i = 0, num = 0;
+	long int i = 0, num = 0;
 	int centsA[5] = {25, 10, 5, 2, 1};
-	unsigned int cents = 0;
-	unsigned int times[5] = {0};
+	unsigned long int cents = 0;
+	unsigned long int times[5] = {0};
 
 	if (argc == 1)
 	{
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	}
 	if (num < 0)
 	{
-		printf("%d\n", cents);
+		printf("%lu\n", cents);
 		return (0);
 	}
 	for (i = 0; i < 5; i++)
@@ -36,6 +36,6 @@ int main(int argc, char *argv[])
 		num = num % centsA[i];
 	}
 	cents = times[0] + times[1] + times[2] + times[3] + times[4];
-	printf("%d\n", cents);
+	printf("%lu\n", cents);
 	return (0);
 }
