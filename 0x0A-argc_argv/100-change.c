@@ -12,9 +12,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int num = 0, cents = 0, i = 0;
+	int num = 0, i = 0;
 	int centsA[5] = {25, 10, 5, 2, 1};
-	int times[5] = {0};
+	unsigned int cents = 0;
+	unsigned int times[5] = {0};
 
 	if (argc == 1)
 	{
@@ -39,5 +40,5 @@ int main(int argc, char *argv[])
 	}
 	cents = times[0] + times[1] + times[2] + times[3] + times[4];
 	printf("%d\n", cents);
-	return (cents);
+	return (0);
 }
