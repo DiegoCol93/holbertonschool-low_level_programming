@@ -39,5 +39,5 @@ int main(int argc, char *argv[])
 	}
 	cents = times[0] + times[1] + times[2] + times[3] + times[4];
 	printf("%d\n", cents);
-	return (0);
+	return (cents);
 }
