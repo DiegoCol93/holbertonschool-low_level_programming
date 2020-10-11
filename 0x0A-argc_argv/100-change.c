@@ -4,6 +4,7 @@
 #include "holberton.h"
 /**
  * main - Prints the minimum number of coins to make change.
+ *
  * @argc: Input number.
  * @argv: Input string.
  *
@@ -23,13 +24,13 @@ int main(int argc, char *argv[])
 	num = atoi(argv[1]);
 	if (argc > 2)
 	{
-		printf("\033[91mError\n\033[0m");
+		printf("Error\n");
 		return (1);
 	}
 	if (num < 0)
 	{
 		printf("0\n");
-		return (0);
+		return (1);
 	}
 	for (i = 0; i < 5; i++)
 	{
