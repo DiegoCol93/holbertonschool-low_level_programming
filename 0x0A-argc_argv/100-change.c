@@ -1,4 +1,3 @@
-#include <string.h>
 #include "holberton.h"
 /**
  * main - Prints the minimum number of coins to make change.
@@ -17,18 +16,18 @@ int main(int argc, char *argv[])
 
 	if (argc == 1)
 	{
-		printf("Usage:%s cents\n", argv[0]);
+		printf("Usage: %s cents\n", argv[0]);
 		return (0);
 	}
 	num = atoi(argv[1]);
 	if (argc > 2)
 	{
-		printf("\033[91mError\n\033[0m");
+		printf("Error\n");
 		return (1);
 	}
-	if (num <= 0)
+	if (num < 0)
 	{
-		printf("0\n");
+		printf("%d\n", cents);
 		return (0);
 	}
 	for (i = 0; i < 5; i++)
