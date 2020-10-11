@@ -26,10 +26,10 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	if (num < 0)
- 	{
- 		printf("%d\n", cents);
- 		return (0);
- 	}
+	{
+		printf("%d\n", cents);
+		return (0);
+	}
 	for (i = 0; i < 5; i++)
 	{
 		times[i] = num / centsA[i];
