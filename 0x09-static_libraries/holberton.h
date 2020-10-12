@@ -1,5 +1,5 @@
-/* List of prototypes for use with libholberton.a */
-#define NULL 0
+/**/
+#include <stddef.h>
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
