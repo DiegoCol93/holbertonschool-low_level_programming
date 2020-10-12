@@ -1,3 +1,4 @@
+/* List of prototypes for use with libholberton.a */
 #define NULL 0
 int _putchar(char c);
 int _islower(int c);
