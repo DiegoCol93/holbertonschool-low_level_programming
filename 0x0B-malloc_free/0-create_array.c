@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdlib.h>
 /**
- * simple_print_buffer - Creates an array of chars, and initializes it with
+ * create_array - Creates an array of chars, and initializes it with
  *                       a specific char.
  *
  * @size:                Size of the array.
