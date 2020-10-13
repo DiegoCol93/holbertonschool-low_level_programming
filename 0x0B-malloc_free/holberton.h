@@ -1,5 +1,7 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
+#define NULL '\0'
+#include <stdlib.h>
 
 /* Writes the character c to stdout */
 int _putchar(char c);
