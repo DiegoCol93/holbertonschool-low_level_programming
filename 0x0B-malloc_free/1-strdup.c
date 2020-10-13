@@ -17,10 +17,10 @@ char *_strdup(char *str)
 	for (i = 0; str[i]; i++)
 		lenght = i + 1;
 
-	cpy = malloc(sizeof(char) * lenght + 1);
+	cpy = malloc(sizeof(char) * lenght);
 
 		if (cpy != NULL)
-			for (i = 0; str[i]; i++)
+			for (i = 0; i <= lenght; i++)
 				cpy[i] = str[i];
 		else
 			return (NULL);
