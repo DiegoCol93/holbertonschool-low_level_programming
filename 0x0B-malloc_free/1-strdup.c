@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _strdup - Returns a pointer to a new string which is a copy of the string str
+ * _strdup - Returns a pointer to a new copy of the string str.
  *
  * @str: Source string.
  *
@@ -15,9 +15,9 @@ char *_strdup(char *str)
 		return (NULL);
 
 	for (i = 0; str[i]; i++)
-	     lenght = i;
+		lenght = i;
 
-	cpy = malloc(sizeof(char) * lenght);
+	cpy = malloc(sizeof(char) * lenght + 1);
 		if (cpy != NULL)
 			for (i = 0; str[i]; i++)
 				cpy[i] = str[i];
