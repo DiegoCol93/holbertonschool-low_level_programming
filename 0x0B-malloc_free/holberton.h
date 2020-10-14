@@ -1,8 +1,8 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
-#define NULL '\0'
+#include <stdio.h>
 #include <stdlib.h>
-
+#include <stddef.h>
 /* Writes the character c to stdout */
 int _putchar(char c);
 
