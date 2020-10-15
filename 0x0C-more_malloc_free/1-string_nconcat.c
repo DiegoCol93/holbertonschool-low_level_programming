@@ -6,7 +6,7 @@
  *      @s2:      - String 2.
  *      @n:       - Amount of bytes to concatenate.
  *
- *    Return: *s  - pointer to new string, NULL if fails.
+ *   Return:  *s  - pointer to new string, NULL if fails.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
@@ -21,11 +21,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		(ls1++); /*                Counts lenght of string s1.        */
 	while (s2[ls2])
 		(ls2++); /*                Counts lenght of string s2.        */
-	if (n < ls2)
-		s = malloc(ls1 + ls2 - n + 3);
-	else /*                       if and else for n < ls2 to alloc mem.   */
-		s = malloc(ls1 + ls2 + 3);
-	if (s) /*                             If string s != NULL.            */
+	if (n >= ls2)
+	{
+		n = ls2;
+	}
+	s = malloc(ls1 + n + 1);
+	if (s) /*                             If string s is not NULL.        */
 	{
 		for (i = 0; i <= (ls1 + ls2 - n + 1); i++)
 		{ /*                        For while i < total lenght.       */
