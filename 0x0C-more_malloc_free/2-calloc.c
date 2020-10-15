@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
- * _calloc   - Allocates and initializes memory.
+ * _calloc   - Allocates and initializes a block of memory.
  *
  *  @nmemb:  - Number of members for new array.
  *   @size:  - Size of member.
@@ -15,7 +15,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	array = malloc(nmemb * size);
 	if (array)
-		for (i = 0; i < nmemb * size; i++)
+		for (i = 0; i < (nmemb * size); i++)
 		{
 			array[i] = 0;
 		}
