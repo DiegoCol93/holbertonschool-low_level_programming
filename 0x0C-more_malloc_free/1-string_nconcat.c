@@ -21,8 +21,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		(ls1++); /*                Counts lenght of string s1.        */
 	while (s2[ls2])
 		(ls2++); /*                Counts lenght of string s2.        */
-
-	s = malloc(ls1 + ls2 - n + 3); /* Allocates memory of new string s.   */
+	if (n < ls2)
+		s = malloc(ls1 + ls2 - n + 3);
+	else /*                       if and else for n < ls2 to alloc mem.   */
+		s = malloc(ls1 + ls2 + 3);
 	if (s) /*                             If string s != NULL.            */
 	{
 		for (i = 0; i <= (ls1 + ls2 - n + 1); i++)
