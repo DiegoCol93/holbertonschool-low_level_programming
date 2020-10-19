@@ -1,8 +1,5 @@
 #ifndef __FILE__H_
 #define __FILE__H_
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * struct dog - Name, age and owner's name of a dog.
  * @name: Name of the dog.
