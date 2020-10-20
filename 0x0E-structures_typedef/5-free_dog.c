@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 /**
  * free_dog - Frees a newly added dog.
  * @d: Newly added dog.
