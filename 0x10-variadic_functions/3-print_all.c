@@ -30,12 +30,12 @@ void printflo(va_list arg)
 void printstr(va_list arg)
 {
 	char *s;
+
 	s = va_arg(arg, char *);
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s", s);
 }
-
 /**
  * print_all - Prints anything.(char, int, float, string).
  * @format: Formatting string.
