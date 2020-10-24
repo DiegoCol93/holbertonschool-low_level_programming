@@ -4,17 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/**
- * struct print_s - Struct for printing everything.
- * @letter: Letter for format to print.
- * @f: Funcion pointer.
- */
-typedef struct print_s
-{
-	char letter;
-	void (*f)();
-} print_t;
-
 /* _putchar - writes the character c to stdout. */
 int _putchar(char c);
 
@@ -29,6 +18,17 @@ void print_strings(const char *separator, const unsigned int n, ...);
 
 /* 3. print_all - Prints anything.(char, int, float, string) */
 void print_all(const char * const format, ...);
+
+/**
+ * struct print_s - Struct for printing everything.
+ * @letter: Letter for format to print.
+ * @f: Funcion pointer.
+ */
+typedef struct print_s
+{
+	char letter;
+	void (*f)();
+} print_t;
 
 /* 3.1 printcha - Printf a character. */
 void printcha(va_list arg);
