@@ -4,8 +4,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* 3_s. Structure print_s, and typedef print_t. */
-typedef struct print_s {
+/**
+ * struct print_s - Struct for printing everything.
+ * @letter: Letter for format to print.
+ * @f: Funcion pointer.
+ */
+typedef struct print_s
+{
 	char letter;
 	void (*f)();
 } print_t;
