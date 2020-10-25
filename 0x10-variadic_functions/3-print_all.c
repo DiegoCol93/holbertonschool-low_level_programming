@@ -69,6 +69,7 @@ void print_all(const char * const format, ...)
 				printf("%s", s);
 				func[j].f(a_list);
 				s = ", ";
+				break;
 			}
 			j++;
 		}
