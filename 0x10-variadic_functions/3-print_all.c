@@ -48,7 +48,7 @@ void print_all(const char * const format, ...)
 		{'i', printint},
 		{'f', printflo},
 		{'s', printstr},
- 		{'\0', '\0'}
+		{'\0', '\0'}
 	};
 	unsigned int i = 0;
 	unsigned int j = 0;
