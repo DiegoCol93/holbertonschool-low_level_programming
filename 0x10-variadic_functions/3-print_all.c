@@ -1,4 +1,5 @@
 #include "variadic_functions.h"
+
 /**
  * printcha - Printf a character.
  * @arg: Argument to print.
@@ -7,6 +8,7 @@ void printcha(va_list arg)
 {
 	printf("%c", va_arg(arg, int));
 }
+
 /**
  * printint - Prints an integer number.
  * @arg: Argument to print.
@@ -15,6 +17,7 @@ void printint(va_list arg)
 {
 	printf("%d", va_arg(arg, int));
 }
+
 /**
  * printflo - Prints a float type number.
  * @arg: Argument to print.
@@ -23,6 +26,7 @@ void printflo(va_list arg)
 {
 	printf("%f", va_arg(arg, double));
 }
+
 /**
  * printstr - Prints a string.
  * @arg: Argument to print.
@@ -36,6 +40,7 @@ void printstr(va_list arg)
 		s = "(nil)";
 	printf("%s", s);
 }
+
 /**
  * print_all - Prints anything.(char, int, float, string).
  * @format: Formatting string.
