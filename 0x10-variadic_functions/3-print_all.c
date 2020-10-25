@@ -60,7 +60,7 @@ void print_all(const char * const format, ...)
 	char *s = "";
 
 	va_start(a_list, format);
-	while (format[i] != '\0' && format)
+	while (format && format[i] != '\0')
 	{
 		while (func[j].letter != '\0')
 		{
