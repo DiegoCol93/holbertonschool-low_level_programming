@@ -14,21 +14,21 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *last_node;
 
 	for (len = 0; str[len]; len++)
-	{}
-	anew_node = malloc(NODE);
-	if (!anew_node)
+	{} /* Counts lenght of given string. */
+	anew_node = malloc(NODE); /* Allocates node in memory */
+	if (!anew_node) /* If no new node allocated. */
 		return (NULL);
-	anew_node->str = strdup(str);
-	anew_node->len = len;
-	anew_node->next = NULL;
-	last_node = *head;
+	anew_node->str = strdup(str); /* Duplicates given string into node. */
+	anew_node->len = len; /* Sets number for len of str. */
+	anew_node->next = NULL; /* Sets tail of new node. */
+	last_node = *head; /* Sets aux pointer for running the list. */
 	if (*head)
-	{
-		while (last_node->next)
+	{ /* If head exists, run through lenght of list. */
+		while (last_node->next) /* Loop for moving. */
 			last_node = last_node->next;
-		last_node->next = anew_node;
+		last_node->next = anew_node; /* Sets tail of list to new node */
 	}
-	else
-		*head = anew_node;
-	return (*head);
+	else /* Else, when head does not exist. */
+		*head = anew_node; /* Set new node as the head. */
+	return (*head); /* Return edited list. */
 }
