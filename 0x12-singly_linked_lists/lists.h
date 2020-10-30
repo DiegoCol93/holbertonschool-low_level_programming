@@ -30,10 +30,10 @@ size_t list_len(const list_t *h);
 /* 2. add_node - Adds a new node at the beginning of a list_t list. */
 list_t *add_node(list_t **head, const char *str);
 
-/* 3.  */
+/* 3. Adds a new node at the end of a list_t list. */
 list_t *add_node_end(list_t **head, const char *str);
 
-/* 4. */
+/* 4. Frees a list_t list. */
 void free_list(list_t *head);
 
 
