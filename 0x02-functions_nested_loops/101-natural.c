@@ -3,7 +3,7 @@
 /**
  * natural - Prints sum of factors of 3 and 5 less than 1024.
  */
-void natural(void)
+void main(void)
 {
 	int i, num = 0;
 
