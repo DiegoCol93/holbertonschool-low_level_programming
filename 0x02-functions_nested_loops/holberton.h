@@ -67,6 +67,3 @@ void print_times_table(int n);
  * _putspace - adds spaces for function print_times_table.
  */
 void _putspace(int i, int j);
-
-/* Prints sum of factors of 3 and 5 less than 1024. */
-void natural(void);
