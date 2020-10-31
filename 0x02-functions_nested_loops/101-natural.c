@@ -2,8 +2,10 @@
 #include <stdio.h>
 /**
  * main - Prints sum of factors of 3 and 5 less than 1024.
+ *
+ * Return: 0 on succes.
  */
-void main(void)
+int main(void)
 {
 	unsigned int i, num = 0;
 
@@ -13,4 +15,5 @@ void main(void)
 			num += i;
 	}
 	printf("%d\n", num);
+	return (0);
 }
