@@ -1,11 +1,11 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * natural - Prints sum of factors of 3 and 5 less than 1024.
+ * main - Prints sum of factors of 3 and 5 less than 1024.
  */
 void main(void)
 {
-	int i, num = 0;
+	unsigned int i, num = 0;
 
 	for (i = 0; i < 1024; i++)
 	{
