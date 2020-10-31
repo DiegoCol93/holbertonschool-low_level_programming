@@ -38,6 +38,6 @@ list_t *add_node_end(list_t **head, const char *str);
 void free_list(list_t *head);
 
 /* 100. Prints a stirng before execution of main function. */
-void pre_main_fun (void) __attribute__ ((constructor));
+void pre_main_fun(void) __attribute__ ((constructor));
 
 #endif /* __FILE___H_ end if file header. */
