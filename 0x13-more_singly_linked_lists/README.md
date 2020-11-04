@@ -1,0 +1,1 @@
+This is a project about linked list algorithms in C.
