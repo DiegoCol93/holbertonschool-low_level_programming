@@ -2,9 +2,12 @@
 /**
  * listint_len - Returns the number of elements in a linked list.
  *
- * @h: Pointer to the head of the list.
+ *  Arguments:
+ *     @h:     - Pointer to the head of the list.
  *
- * Return: Number of nodes on the list.
+ *   Return:   - Number of nodes on the list.
+ *
+ * |------- Written by Diego Lopez, November 3rd 2020. -------|
  */
 size_t listint_len(const listint_t *h)
 {
