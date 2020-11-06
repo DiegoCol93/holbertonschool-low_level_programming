@@ -19,4 +19,7 @@ int set_bit(unsigned long int *n, unsigned int index);
 /* 4. Sets the value of a bit to 0 at a given index. */
 int clear_bit(unsigned long int *n, unsigned int index);
 
+/* 5. Returns the number of bits to flip to reach a number. */
+unsigned int flip_bits(unsigned long int n, unsigned long int m);
+
 #endif /* End of if __FILE___H_ exists */
