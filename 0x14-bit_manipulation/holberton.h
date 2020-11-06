@@ -10,4 +10,7 @@ unsigned int binary_to_uint(const char *b);
 /* 1. Prints the binary form of a positive int number. */
 void print_binary(unsigned long int n);
 
+/* 2. Returns the value of a bit at a given index. */
+int get_bit(unsigned long int n, unsigned int index);
+
 #endif /* End of if __FILE___H_ exists */
