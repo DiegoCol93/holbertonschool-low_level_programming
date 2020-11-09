@@ -23,7 +23,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (filename)
 		{
 			fd = open(filename, O_RDONLY);
-
 			if (fd == -1)
 			{
 				return (0);
@@ -31,10 +30,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			nbytes = check = read(fd, buff, letters);
 			if (check == -1)
 				return (0);
+			close(fd);
 			check =	write(STDOUT_FILENO, buff, letters);
 			if (check == -1)
 				return (0);
-			close(fd);
 		}
 	}
 	return (nbytes);
