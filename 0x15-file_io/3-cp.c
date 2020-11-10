@@ -69,8 +69,6 @@ int copy_file(char *file_from, char *file_to)
 			return (1);
 		if (write(fd1, buff, check0) == -1)
 			return (2);
-		if (check0 == 1024)
-			clear_buff(buff);
 	}
 	if (close(fd) == -1)
 	{
@@ -83,19 +81,4 @@ int copy_file(char *file_from, char *file_to)
 		exit(100);
 	}
 	return (0);
-}
-/**
- * clear_buff - Clears a char buffer of 1024 bytes.
- *
- * Arguments:
- *   @buff:   - Target buffer to clear.
- *
- * |- Written by Diego Lopez - November/09/2020. -|
- */
-void clear_buff(char *buff)
-{
-	int i;
-
-	for (i = 0; i < 1024; i++)
-		buff[i] = 0;
 }
