@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 int copy_file(char *file_from, char *file_to)
 {
 	char buff[1024];
-	int fd, fd1, check0 = 1, check1 = 1;
+	int fd, fd1, check0, check1 = 1;
 
 	if (file_from)
 	{
@@ -65,9 +65,8 @@ int copy_file(char *file_from, char *file_to)
 		fd1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 		if (fd1 == -1)
 			return (2);
-		while (check0 != 0)
+		while ((check0 = read(fd, buff, 1024)) != 0)
 		{
-			check0 = read(fd, buff, 1024);
 			if (check0 == -1)
 				return (1);
 			check1 = write(fd1, buff, check0);
