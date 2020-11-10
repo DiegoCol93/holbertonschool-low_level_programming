@@ -21,4 +21,7 @@ int append_text_to_file(const char *filename, char *text_content);
 /* 4. Copies a file. */
 int copy_file(char *file_from, char *file_to);
 
+/* 4.1 Clears a char buffer of 1024 bytes. */
+void clear_buff(char *buff);
+
 #endif /* __FILE___H_ */
