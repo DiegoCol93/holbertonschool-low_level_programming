@@ -57,33 +57,31 @@ int copy_file(char *file_from, char *file_to)
 	char buff[1024];
 	int fd, fd1, check0;
 
-		fd = open(file_from, O_RDONLY);
-		if (fd == -1)
+	fd = open(file_from, O_RDONLY);
+	if (fd == -1)
+		return (1);
+	fd1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fd1 == -1)
+		return (2);
+	while ((check0 = read(fd, buff, 1024)) != 0)
+	{
+		if (check0 == -1)
 			return (1);
-		fd1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
-		if (fd1 == -1)
+		if (write(fd1, buff, check0) == -1)
 			return (2);
-		while ((check0 = read(fd, buff, 1024)) != 0)
-		{
-			if (check0 == -1)
-				return (1);
-			if (write(fd1, buff, check0) == -1)
-				return (2);
-			if (check0 == 1024)
-				clear_buff(buff);
-		}
-		if (close(fd) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
-				fd);
-			exit(100);
-		}
-		if (close(fd1) == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
-				fd1);
-			exit(100);
-		}
+		if (check0 == 1024)
+			clear_buff(buff);
+	}
+	if (close(fd) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
+	if (close(fd1) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
+		exit(100);
+	}
 	return (0);
 }
 /**
