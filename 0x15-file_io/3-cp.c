@@ -65,7 +65,7 @@ int copy_file(char *file_from, char *file_to)
 		fd1 = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 		if (fd1 == -1)
 			return (2);
-		while (check0 > 0)
+		while (check0 != 0)
 		{
 			check0 = read(fd, buff, 1024);
 			if (check0 == -1)
