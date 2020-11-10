@@ -55,10 +55,8 @@ int main(int argc, char **argv)
 int copy_file(char *file_from, char *file_to)
 {
 	char buff[1024];
-	int fd, fd1, check0, check1 = 1;
+	int fd, fd1, check0;
 
-	if (file_from)
-	{
 		fd = open(file_from, O_RDONLY);
 		if (fd == -1)
 			return (1);
@@ -69,7 +67,7 @@ int copy_file(char *file_from, char *file_to)
 		{
 			if (check0 == -1)
 				return (1);
-			if ((check1 = write(fd1, buff, check0)) == -1)
+			if (write(fd1, buff, check0) == -1)
 				return (2);
 			if (check0 == 1024)
 				clear_buff(buff);
@@ -86,7 +84,6 @@ int copy_file(char *file_from, char *file_to)
 				fd1);
 			exit(100);
 		}
-	}
 	return (0);
 }
 /**
