@@ -78,15 +78,13 @@ int copy_file(char *file_from, char *file_to)
 				clear_buff(buff);
 			}
 		}
-		check0 = close(fd);
-		if (check0 == -1)
+		if (close(fd) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
 				fd);
 			exit(100);
 		}
-		check1 = close(fd1);
-		if (check1 == -1)
+		if (close(fd1) == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
 				fd1);
