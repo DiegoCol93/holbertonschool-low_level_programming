@@ -73,13 +73,15 @@ int copy_file(char *file_from, char *file_to)
 		check0 = close(fd);
 		if (check0 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
+				fd);
 			exit(100);
 		}
 		close(fd1);
 		if (check0 == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't close fd %d", fd1);
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n",
+				fd1);
 			exit(100);
 		}
 	}
