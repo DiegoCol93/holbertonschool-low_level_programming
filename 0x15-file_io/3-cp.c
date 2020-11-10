@@ -11,6 +11,8 @@
  *         98 if cannot read() or open() from source file.
  *         99 if cannot open() or write() the target file.
  *         100 if cannot close a file descriptor.
+ *
+ * |--------------- Written by Diego Lopez - November/09/2020. ---------------|
  */
 int main(int argc, char **argv)
 {
@@ -71,6 +73,10 @@ int copy_file(char *file_from, char *file_to)
 			check1 = write(fd1, buff, check0);
 			if (check1 == -1)
 				return (2);
+			if (check0 == 1024)
+			{
+				clear_buff(buff);
+			}
 		}
 		check0 = close(fd);
 		if (check0 == -1)
@@ -88,4 +94,19 @@ int copy_file(char *file_from, char *file_to)
 		}
 	}
 	return (0);
+}
+/**
+ * clear_buff - Clears a char buffer of 1024 bytes.
+ *
+ * Arguments:
+ *   @buff:   - Target buffer to clear.
+ *
+ * |- Written by Diego Lopez - November/09/2020. -|
+ */
+void clear_buff(char *buff)
+{
+	int i;
+
+	for (i = 0; i < 1024; i++)
+		buff[i] = 0;
 }
