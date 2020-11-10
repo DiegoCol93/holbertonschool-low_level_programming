@@ -69,13 +69,10 @@ int copy_file(char *file_from, char *file_to)
 		{
 			if (check0 == -1)
 				return (1);
-			check1 = write(fd1, buff, check0);
-			if (check1 == -1)
+			if ((check1 = write(fd1, buff, check0)) == -1)
 				return (2);
 			if (check0 == 1024)
-			{
 				clear_buff(buff);
-			}
 		}
 		if (close(fd) == -1)
 		{
