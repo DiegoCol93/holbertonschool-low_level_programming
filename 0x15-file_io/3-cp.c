@@ -24,12 +24,14 @@ int main(int argc, char **argv)
 	check =	copy_file(argv[1], argv[2]);
 	if (check == 1)
 	{
-		dprintf(STDERR_FILENO, "Can't read from file %s\n", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n",
+			argv[1]);
 		exit(98);
 	}
 	if (check == 2)
 	{
-		dprintf(STDERR_FILENO, "Can't write from file %s\n", argv[2]);
+		dprintf(STDERR_FILENO, "Error: Can't write from file %s\n",
+			argv[2]);
 		exit(99);
 	}
 	return (0);
