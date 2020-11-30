@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <unistd.h>
+#include <stdint.h>
 /**
  * main - Prints the first 50 Fibonacci numbers.
  *
@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	unsigned long long int a = 1, b = 2, c;
+	int64_t a = 1, b = 2, c;
 
 	while (a < 100000000 && b < 100000000 && c < 100000000)
 	{
 		c = a + b;
-		printf("%llu", a);
+		printf("%lu", a);
 		printf(", ");
 
-		printf("%llu", b);
+		printf("%lu", b);
 		if (b >= 63245986)
 			break;
 		printf(", ");
 
-		printf("%llu", c);
+		printf("%lu", c);
 		a = b + c;
 		b = c + a;
 		printf(", ");
