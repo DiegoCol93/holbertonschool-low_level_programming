@@ -7,17 +7,20 @@
  */
 int main(void)
 {
-	int a = 1, b = 1, c;
+	unsigned long long int a = 1, b = 2, c;
 
-	while (a < 100 && b < 100 && c < 100)
+	while (a < 100000000 && b < 100000000 && c < 100000000)
 	{
 		c = a + b;
-		printf("%d, ", a);
-		printf("%d", b);
-		if (a > 100 || b > 100 || c > 100)
+		printf("%llu", a);
+		printf(", ");
+
+		printf("%llu", b);
+		if (b >= 63245986)
 			break;
 		printf(", ");
-		printf("%d", c);
+
+		printf("%llu", c);
 		a = b + c;
 		b = c + a;
 		printf(", ");
