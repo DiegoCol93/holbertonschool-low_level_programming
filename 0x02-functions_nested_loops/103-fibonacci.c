@@ -14,19 +14,19 @@ int main(void)
 
 		if (a % 2 == 0)
 		{
-			printf("a : %lu", a);
+			printf("%u", a);
 			printf(", ");
 		}
 		if (b % 2 == 0)
 		{
-			printf("b : %lu", b);
+			printf("%u", b);
 			if (b >= 832040)
 				break;
 			printf(", ");
 		}
 		if (c % 2 == 0)
 		{
-			printf("c : %lu", c);
+			printf("%u", c);
 			printf(", ");
 		}
 		a = b + c;
