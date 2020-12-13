@@ -25,42 +25,32 @@
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *new_node = NULL, *current = NULL;
+	dlistint_t *new = NULL, *past = *h;
 
-	new_node = malloc(sizeof(dlistint_t));
-	if (!new_node)
-		return (NULL);
-	new_node->n = n;
-	new_node->prev = NULL;
-	new_node->next = NULL;
-	if (h) /* If whole head exists. */
+	new = malloc(sizeof(dlistint_t));
+	if (!new)
+		return(NULL);
+	new->n = n;
+	past = *h;
+	if (idx > 0)
 	{
-		if (!*h && idx == 0) /* If no 1st node on the head, */
-		{                    /* and idx == 0. */
-			*h = new_node;
-			return (*h);
-		}
-		current = *h; /* Set current pointer to 1st node.*/
-		if (idx == 0) /* If idx 0 add at beggining. */
+		for (; idx > 1; idx--)
 		{
-			new_node->next = *h;
-			*h = new_node;
-			return (*h);
+			past = past->next;
+			if (!past)
+				return(NULL);
 		}
-		for (; idx > 0 && current; idx--) /* Loop through list. */
-			current = current->next;
-		if (!current && idx) /* If reached the end and idx > 0. */
-			return (NULL);
-		else if (!current) /* Else, if still no node, idx has to be 0,*/
-			return (add_dnodeint_end(h, n));/* so , set end node.*/
-		new_node->next = current; /* Set new_node's next. */
-		if (current->prev) /* If there is a previouse node. */
-		{
-			current = current->prev;
-			current->next = new_node;
-		}
-		current->prev = new_node; /* Set new_node's prev. */
+		new->next = past->next;
+		new->prev = past;
+		past->next->prev = new;
+		past->next = new;
 	}
-	/* Creates a new node and returns it if no head exists, and idx == 0. */
-	return (h == NULL && idx == 0 ? add_dnodeint(h, n) : new_node);
+	else
+	{
+		new->next = past;
+		past->prev = new;
+		new->prev = NULL;
+		*h = new;
+	}
+	return (new);
 }
