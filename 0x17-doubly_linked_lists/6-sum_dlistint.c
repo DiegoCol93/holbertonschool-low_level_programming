@@ -34,5 +34,5 @@ int sum_dlistint(dlistint_t *head)
 		}
 		data += node->n;
 	}
-	return(data);
+	return (data);
 }
