@@ -61,5 +61,6 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		current->prev = new_node; /* Set new_node's prev. */
 	}
-	return (new_node);
+	/* Creates a new node and returns it if no head exists, and idx == 0. */
+	return (h == NULL && idx == 0 ? add_dnodeint(h, n) : new_node);
 }
