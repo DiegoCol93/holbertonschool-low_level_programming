@@ -30,25 +30,27 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		removed = *head;
 		if (index == 0)
 		{
+			*head = removed->next; /* Move head to new 1st node*/
 			if (removed->next) /* If next node exist. */
 				/* Set next node's previous to NULL */
 				removed->next->prev = NULL;
-			*head = removed->next; /* Move head to new 1st node*/
 		}
 		else
 		{
 			for (; index > 0; index--) /* Move through list. */
+			{
 				removed = removed->next;
+				if (!removed)
+					return (-1);
+			}
 			if (removed->prev) /* If previous node exists. */
 				removed->prev->next = removed->next;
 			if (removed->next) /* If next node exists. */
 				removed->next->prev = removed->prev;
 		}
 		if (removed)
-		{
 			free(removed);
-			return (1);
-		}
+		return (1);
 	}
 	return (-1);
 }
