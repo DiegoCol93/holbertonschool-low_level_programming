@@ -49,10 +49,10 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 		for (; idx > 0 && current; idx--) /* Loop through list. */
 			current = current->next;
-		if (!current) /* If reached the end and node. */
+		if (!current && idx) /* If reached the end and idx > 0. */
 			return (NULL);
-		if (!current->next && idx == 0) /* If reached end but idx 0. */
-			return (add_dnodeint_end(h, n));
+		else if (!current) /* Else, if still no node, idx has to be 0.*/
+			return (add_dnodeint_end(h, n));/* Set end node.*/
 		new_node->next = current; /* Set new_node's next. */
 		if (current->prev) /* If there is a previouse node. */
 		{
