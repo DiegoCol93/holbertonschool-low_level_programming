@@ -60,6 +60,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			current->next = new_node;
 		}
 		current->prev = new_node; /* Set new_node's prev. */
+
 	}
 	return (new_node);
 }
