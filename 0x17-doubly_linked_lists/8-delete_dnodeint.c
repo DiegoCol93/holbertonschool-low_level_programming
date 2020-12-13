@@ -45,8 +45,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 				removed->next->prev = removed->prev;
 		}
 		if (removed)
+		{
 			free(removed);
-		return (1);
+			return (1);
+		}
 	}
 	return (-1);
 }
