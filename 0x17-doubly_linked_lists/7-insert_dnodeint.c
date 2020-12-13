@@ -29,39 +29,37 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 
 	new_node = malloc(sizeof(dlistint_t));
 	if (!new_node)
-		return(NULL);
+		return (NULL);
 	new_node->n = n;
 	new_node->prev = NULL;
 	new_node->next = NULL;
-	if (h)
+	if (h) /* If whole head exists. */
 	{
-		if (!*h)
+		if (!*h) /* If no 1st node on the head. */
 		{
 			*h = new_node;
 			return (*h);
 		}
-		current = *h;
-		if (idx == 0)
+		current = *h; /* Set current pointer to 1st node.*/
+		if (idx == 0) /* If idx 0 add at beggining. */
 		{
 			new_node->next = *h;
 			*h = new_node;
-			return(new_node);
+			return (new_node);
 		}
-		for(; idx > 0; idx--)
-		{
+		for (; idx > 0 && current; idx--) /* Loop through list. */
 			current = current->next;
-			if (!current->next)
-				return(add_dnodeint_end(h, n));
-		}
-		if (!current)
-			return(NULL);
-		new_node->next = current;
-		if (current->prev)
+		if (!current) /* If reached the end and node. */
+			return (NULL);
+		if (!current->next && idx == 0) /* If reached end but idx 0. */
+			return (add_dnodeint_end(h, n));
+		new_node->next = current; /* Set new_node's next. */
+		if (current->prev) /* If there is a previouse node. */
 		{
 			current = current->prev;
 			current->next = new_node;
 		}
-		current->prev = new_node;
+		current->prev = new_node; /* Set new_node's prev. */
 	}
-	return(new_node);
+	return (new_node);
 }
