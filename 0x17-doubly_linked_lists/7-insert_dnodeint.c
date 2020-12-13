@@ -35,8 +35,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node->next = NULL;
 	if (h) /* If whole head exists. */
 	{
-		if (!*h) /* If no 1st node on the head. */
-		{
+		if (!*h && idx == 0) /* If no 1st node on the head, */
+		{                    /* and idx == 0. */
 			*h = new_node;
 			return (*h);
 		}
@@ -51,8 +51,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 			current = current->next;
 		if (!current && idx) /* If reached the end and idx > 0. */
 			return (NULL);
-		else if (!current) /* Else, if still no node, idx has to be 0.*/
-			return (add_dnodeint_end(h, n));/* Set end node.*/
+		else if (!current) /* Else, if still no node, idx has to be 0,*/
+			return (add_dnodeint_end(h, n));/* so , set end node.*/
 		new_node->next = current; /* Set new_node's next. */
 		if (current->prev) /* If there is a previouse node. */
 		{
