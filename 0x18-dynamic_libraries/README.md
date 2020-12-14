@@ -7,3 +7,5 @@ Dynamic Libraries in C.
 
   1-create_dynamic_lib.sh  - Bash script for creating a dynamic
                               library of all C files.
+
+
