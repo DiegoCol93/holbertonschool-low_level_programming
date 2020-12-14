@@ -5,5 +5,5 @@ Dynamic Libraries in C.
        holberton.h         - Header file with the prototypes of
                               the functions.
 
-   1-create_dynamic_lib.sh - Bash script for creating a dynamic
+  1-create_dynamic_lib.sh  - Bash script for creating a dynamic
                               library of all C files.
