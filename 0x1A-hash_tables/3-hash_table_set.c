@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	unsigned long int index = 0;
 
 	/* If NULL key */
-	if (!key)
+	if (!key || key == '')
 		return (1);
 	/* Get index using hash function. */
 	index = key_index((unsigned char *)key, ht->size);
