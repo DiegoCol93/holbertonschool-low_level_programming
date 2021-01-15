@@ -26,8 +26,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	hash_node_t *new_node = NULL, *tmp = NULL;
 	unsigned long int index = 0;
 
-	/* If empty or NULL key or NULL table. */
-	if (!strcmp(key, "") || !key || !ht)
+	/* If empty or NULL key or NULL table. or NULL value */
+	if (!strcmp(key, "") || !key || !ht || !value)
 		return (1);
 	/* Get index using hash function. */
 	index = key_index((unsigned char *)key, ht->size);
