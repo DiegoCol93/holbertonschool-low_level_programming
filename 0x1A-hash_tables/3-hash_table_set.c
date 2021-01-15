@@ -28,7 +28,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	/* If empty or NULL key or NULL table. or NULL value */
 	if (strcmp(key, "") == 0 || !key || !ht || !value)
-		return (1);
+		return (0);
 	/* Get index using hash function. */
 	index = key_index((unsigned char *)key, ht->size);
 
