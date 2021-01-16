@@ -23,29 +23,29 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *tmp = NULL;
 
 	if (!ht)
-		printf("{}\n");
-	else
 	{
-		number_of_keys = count_keys(ht);
-		putchar('{');
-		for (; index < ht->size; index++)
+		printf("{}\n");
+		exit(1);
+	}
+	number_of_keys = count_keys(ht);
+	putchar('{');
+	for (; index < ht->size; index++)
+	{
+		if (ht->array[index])
 		{
-			if (ht->array[index])
+			tmp = ht->array[index];
+			while (tmp)
 			{
-				tmp = ht->array[index];
-				while (tmp)
-				{
-					printf("'%s': '%s'", tmp->key, tmp->value);
-					if (number_of_keys > 1)
-						printf(", ");
-					number_of_keys -= 1;
-					tmp = tmp->next;
-				}
+				printf("'%s': '%s'", tmp->key, tmp->value);
+				if (number_of_keys > 1)
+					printf(", ");
+				number_of_keys -= 1;
+				tmp = tmp->next;
 			}
 		}
-		putchar('}');
-		putchar('\n');
 	}
+	putchar('}');
+	putchar('\n');
 }
 
 /**
