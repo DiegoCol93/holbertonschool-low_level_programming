@@ -35,7 +35,7 @@ void hash_table_print(const hash_table_t *ht)
 				tmp = ht->array[index];
 				while (tmp)
 				{
-					printf("'%s: %s'", tmp->key, tmp->value);
+					printf("'%s': '%s'", tmp->key, tmp->value);
 					if (number_of_keys > 1)
 						printf(", ");
 					number_of_keys -= 1;
