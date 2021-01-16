@@ -1,5 +1,6 @@
 #ifndef __FILE___H_
 #define __FILE___H_
+#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -56,11 +57,14 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* 3. hash_table_set - Sets a key:value pair on the table. */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 
-/* 4. */
+/* 4. hash_table_get - Gets the value for the given key. */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
-/* 5. */
+/* 5. hash_table_print- Prints the keys on a hash table. */
 void hash_table_print(const hash_table_t *ht);
+
+/* 5.1 count_keys - Counts the number of keys on a hash. */
+unsigned long int count_keys(const hash_table_t *ht);
 
 /* 6. */
 void hash_table_delete(hash_table_t *ht);
