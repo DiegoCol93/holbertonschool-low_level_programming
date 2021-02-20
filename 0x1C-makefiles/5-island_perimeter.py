@@ -4,33 +4,17 @@
 
 def island_perimeter(grid):
     """ Calculates the perimeter of an island given the 2D matrix grid. """
-
-    if len(grid) >= 100:
-        return(0)
-
-    y = 0
-    perim_sum = 0
-    tot_perim = 0
-
-    for row in grid:
-        x = 0
-        for zone in row:
-            if zone == 1:
-                # Assume is a lone zone with perim 4.
-                perim_sum = 4
-                # If zone to the right is occupied.
-                if row[x + 1] == 1:
-                    perim_sum -= 1
-                # If zone to the left is occupied.
-                if row[x - 1] == 1:
-                    perim_sum -= 1
-                # If zone above is occupied.
-                if grid[y-1][x] == 1:
-                    perim_sum -= 1
-                # If zone below is occupied.
-                if grid[y + 1][x] == 1:
-                    perim_sum -= 1
-                tot_perim += perim_sum
-            x += 1
-        y += 1
-    return(tot_perim)
+    rows, columns, perimeter = len(grid), len(grid[0]), 0
+    for row in range(rows):
+        for position in range(columns):
+            if grid[row][position] == 0:
+                continue
+            if row == 0 or grid[row - 1][position] == 0:
+                perimeter += 1
+            if row == rows - 1 or grid[row + 1][position] == 0:
+                perimeter += 1
+            if position == 0 or grid[row][position - 1] == 0:
+                perimeter += 1
+            if position == columns - 1 or grid[row][position + 1] == 0:
+                perimeter += 1
+    return perimeter
