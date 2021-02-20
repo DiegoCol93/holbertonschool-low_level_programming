@@ -24,7 +24,7 @@ def island_perimeter(grid):
                 # If zone above is occupied.
                 if grid[y-1][x] == 1:
                     perim_sum -= 1
-                #If zone below is occupied.
+                # If zone below is occupied.
                 if grid[y + 1][x] == 1:
                     perim_sum -= 1
                 tot_perim += perim_sum
