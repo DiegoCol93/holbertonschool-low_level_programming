@@ -5,6 +5,9 @@
 def island_perimeter(grid):
     """ Calculates the perimeter of an island given the 2D matrix grid. """
 
+    if len(grid) >= 100:
+        return(0)
+
     y = 0
     perim_sum = 0
     tot_perim = 0
