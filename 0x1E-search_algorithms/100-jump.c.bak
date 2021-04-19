@@ -17,38 +17,23 @@ int jump_search(int *array, size_t size, int value)
 
 	if (array)
 	{
-		/* printf("Value checked array[%lu] = [%d]\n", low, array[low]); */
-		/* if (array[jmp] == value) */
-		/* 	return (jmp); */
-
-		/* While array in [minimum between jmp or size] - 1 less than value */
+		/* While array in [minimum between jmp or size] - 1 less than value. */
 		while (array[(jmp < size ? jmp : size) - 1] < value)
-		/* while (array[jmp - 1] < value) */
 		{
-			printf("Value checked array[%lu] = [%d]\n", jmp - 1, array[jmp - 1]);
 			low = jmp;
 			jmp = jmp + sqrt(size);
 			if (low >= size)
 				return (-1);
 		}
-		printf("Value found between indexes [%lu] and [%lu]\n", low, jmp);
 		while (array[low] < value)
 		{
-			printf("Value checked array[%lu] = [%d]\n", low, array[low]);
 			low = low + 1;
 			/* If low == to minimun from jmp or size - - - - - - - - - - - - */
 			if (low == (jmp < size ? jmp : size))
-			/* if (low == jmp) */
-			{
-				printf("Value checked array[%lu] = [%d]\n", low, array[low]);
 				return (-1);
-			}
 		}
 		if (array[low] == value)
-		{
-			printf("Value checked array[%lu] = [%d]\n", low, array[low]);
 			return (low);
-		}
 		else
 			return (-1);
 	}
