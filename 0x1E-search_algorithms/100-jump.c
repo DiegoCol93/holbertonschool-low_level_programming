@@ -3,13 +3,13 @@
 /**
  * jump_search - Searches for a value in an array of integers.
  *
- *   Arguments:
- *     @array:   - Pointer to array of integers.
- *      @size:   - Size of the array (number of elements).
- *     @value:   - Integer Value to search for.
+ *  Arguments:
+ *    @array:  - Pointer to array of integers.
+ *     @size:  - Size of the array (number of elements).
+ *    @value:  - Integer Value to search for.
  *
- *     Return:   - The (index) of the value in the array or (-1)
- *                  if array is NULL or no value was found.
+ *    Return:  - The (index) of the value in the array or (-1)
+ *                if array is NULL or no value was found.
  */
 int jump_search(int *array, size_t size, int value)
 {
