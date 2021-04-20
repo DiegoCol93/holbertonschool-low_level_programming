@@ -1,7 +1,7 @@
 #include "search_algos.h"
 # define L low
 # define T top
-/* # define A array */
+# define A array
 # define INTERPOL (L + (((double)(T - L) / (A[T] - A[L])) * (value - A[L])))
 # define CONDITION ((A[T] != A[L]) && (value >= A[L]) && (value <= A[T]))
 
@@ -22,7 +22,6 @@ int interpolation_search(int *array, size_t size, int value)
 
 	if (array)
 	{
-		# define A array
 		while CONDITION
 		{
 			mid = INTERPOL;
