@@ -20,7 +20,7 @@ int interpolation_search(int *array, size_t size, int value)
 {
 	size_t low = 0, top = size - 1, mid = INTERPOL;
 
-	if (array)
+	if (A)
 	{
 		while CONDITION
 		{
@@ -36,7 +36,6 @@ int interpolation_search(int *array, size_t size, int value)
 		printf("Value checked array[%lu] is out of range\n", mid);
 		if (value == array[low])
 			return (low);
-		else
-			return (-1);
 	}
+	return (-1);
 }
