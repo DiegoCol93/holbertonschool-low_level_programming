@@ -35,7 +35,6 @@ int jump_search(int *array, size_t size, int value)
 				return (low);
 			low++;
 		}
-		printf("%lu", low);
 	}
 	return (-1);
 }
