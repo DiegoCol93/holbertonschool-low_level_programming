@@ -12,7 +12,10 @@ int binary_search(int *array, size_t size, int value);
 /* 100. Jump search | Jumps searching for an int number. - - - - - - - - - - */
 int jump_search(int *array, size_t size, int value);
 
-/* 102. Interpolation search | algorithm to find an int number. - - - - - - -*/
+/* 102. Interpolation search | Algorithm to find an int number. - - - - - - -*/
 int interpolation_search(int *array, size_t size, int value);
+
+/* 103. Exponential search |  Searches exponentially for a number. - - - - - */
+int exponential_search(int *array, size_t size, int value);
 
 #endif /* _SEARCH_ALGOS_H_ */
